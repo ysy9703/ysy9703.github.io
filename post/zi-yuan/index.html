@@ -1,0 +1,1891 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="VCB-Studio - 大家一起实现的故事！ https://vcb-s.com/
+VCB-Studio Project Tracker - Google 表格 https://docs.google.com/spreadsheets
+/..." />
+    <meta name="keywords" content="资源" />
+    <link rel="stylesheet" href="https://anysword.com//media/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://anysword.com//styles/main.css">
+    <!-- 代码渲染风格css -->
+    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css">
+    
+    <!-- 代码高亮插件 -->
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+    <!-- 代码复制插件 -->
+    <script src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/clipboard.min.js"></script>
+    <!-- live2d插件 -->
+    <link rel="stylesheet" href="https://anysword.com//media/css/live2d.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+    <!-- 数学公式 -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css"
+        integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"
+        integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"
+        integrity="sha384-aGfk5kvhIq5x1x5YdvCp4upKZYnA8ckafviDpmWEKp4afOZEqOli7gqSnh8I6enH" crossorigin="anonymous">
+        </script>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [{
+                left: "$$",
+                right: "$$",
+                display: true
+            },
+            {
+                left: "$",
+                right: "$",
+                display: false
+            }
+            ]
+        });
+    </script>
+    
+    <title>资源</title>
+
+    <!-- 大纲索引css调整 -->
+    
+    <style>
+        .markdownIt-TOC {
+            margin-left: 28%;
+            padding-left: 2px;
+            width: 80%;
+        }
+
+        .markdownIt-TOC li {
+            padding-left: 8%;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div id="landlord">
+        <div class="message" style="opacity:0"></div>
+        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
+    </div>
+    <div id="domainname" style="display:none">https://anysword.com/</div>
+    <div id="content">
+        <div>
+            <!----------- 移动端导航栏👇 ----------------->
+            <div id="bar">
+                <style>
+  .navmobile {
+    z-index: 15;
+    max-height: 40vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .navbar {
+      max-width: 100vw;
+    }
+  }
+
+  @media screen and (max-width:1200px) and (min-width: 768px) {
+    @media (min-width: 768px) {
+      .navbar-nav {
+        float: right;
+        margin: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    .mbapspan {
+      padding: 0;
+    }
+  }
+</style>
+<div class="pjaxloading"  onclick="pjaxloadingClose()">
+  <div class="loadingbackground"></div>
+  <div id="loading">
+    <div class="loading">
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-inverse navbar-fixed-top navmobile">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barmenu"
+        aria-expanded="false" id="barbutton">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a data-pjax class="navbar-brand" style="color:white" href="https://anysword.com/">剑客&nbsp;&nbsp;|</a>
+      <span class="navbar-brand mbapspan"><i id="mbaplayer" class="fa fa-play-circle-o" aria-hidden="true"
+          style="font-size: 28px;top: 12px;position: absolute;" onclick="aplayerPlay();"></i></span>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="barmenu">
+      <ul class="nav navbar-nav">
+        
+        
+        <li>
+          <a data-pjax href="/" style="color:white">
+            首页
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/tags" style="color:white">
+            标签
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/post/gong-ju" style="color:white">
+            工具
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/post/zi-yuan" style="color:white">
+            资源
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/post/xue-xi" style="color:white">
+            学习
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/post/sheng-huo" style="color:white">
+            生活
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/post/yu-le" style="color:white">
+            娱乐
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/archives" style="color:white">
+            归档
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/post/about" style="color:white">
+            关于
+          </a>
+        </li>
+        
+        
+        
+        
+          
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+  <!-- 引入jQuery核心js文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+  <script>
+    let btstate = false;
+    var bt = $("#barbutton");
+    var bm = $("#barmenu");
+    bt.click(function () {
+      dropdown();
+    })
+    function dropdown() {
+      console.log(btstate);
+      //下拉
+      if (btstate == false) {
+        bt.removeClass("collapsed");
+        bt.attr("aria-expanded", "true");
+        bm.attr("aria-expanded", "true")
+        bm.fadeIn(700);
+        btstate = true;
+      }
+      else {
+        bt.addClass("collapsed");
+        bt.attr("aria-expanded", "false");
+        bm.removeClass("in");
+        bm.hide();
+        bm.attr("aria-expanded", "false");
+        btstate = false;
+      }
+    }
+  </script> 
+            </div>
+            <!----------- 移动端导航栏👆 ----------------->
+
+            <!--------------- pc端菜单栏👇 ---------------->
+            <div class="side"><head>
+    <link rel="stylesheet" href="https://anysword.com//media/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://anysword.com//styles/main.css">
+    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css">
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/clipboard.min.js"></script>
+    <link rel="stylesheet" href="https://anysword.com//media/css/live2d.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- fancybox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+    <!--------- 数学公式👇---- -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css"
+        integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"
+        integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"
+        integrity="sha384-aGfk5kvhIq5x1x5YdvCp4upKZYnA8ckafviDpmWEKp4afOZEqOli7gqSnh8I6enH" crossorigin="anonymous">
+    </script>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [{
+                    left: "$$",
+                    right: "$$",
+                    display: true
+                },
+                {
+                    left: "$",
+                    right: "$",
+                    display: false
+                }
+            ]
+        });
+    </script>
+    
+    <!--------- 数学公式👆----------------- -->
+    <!--------- daovocie功能👇 ------------------->
+    
+    <script type="text/javascript">
+        window.$crisp = [];
+        window.CRISP_WEBSITE_ID = "15cad885-d437-4106-9464-06bbaecac816";
+        (function () {
+            d = document;
+            s = d.createElement("script");
+            s.src = "https://client.crisp.chat/l.js";
+            s.async = 1;
+            d.getElementsByTagName("head")[0].appendChild(s);
+        })();
+    </script>
+    
+    <!--------- daovocie功能👆 ------------------->
+    <!-- -----------------twikoo评论系统引入👇 --------->
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.3.1/dist/twikoo.all.min.js"></script>
+    <!-- -----------------twikoo评论系统引入👆 --------->
+    <!---------------- leancloud api 功能依赖引入👇 -------->
+    <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3.13.0/dist/av-min.js"></script>
+    <!---------------- leancloud api 功能依赖引入👆 -------->
+    <!------------------ valine评论系统引入👇 ------------------>
+    <script src="https://anysword.com//media/js/valine.min.js"></script>
+    <!------------------ valine评论系统引入👆 ------------------>
+    <!---------------- 今日诗词api功能依赖👇 ----------------------->
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <!---------------- 今日诗词api功能依赖👆 ----------------------->
+    <!---------------- 今日诗词api功能依赖👇 ----------------------->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ispeak-bber/ispeak-bber.min.js" charset="utf-8"></script>
+    <!---------------- 哔哔功能依赖👆 ----------------------->
+
+
+</head>
+
+<style>
+    body {
+        overflow-x: hidden;
+        height: 100vh;
+        overflow-y: scroll;
+        cursor: url("https://anysword.com//media/images/mouse_cursor.png"), auto
+    }
+</style>
+
+<body>
+    <!--=------ 页面加载动态画面👇 --------------->
+    <div class="pjaxloading" onclick="pjaxloadingClose()">
+        <div class="loadingbackground"></div>
+        <div id="loading-aname">
+            <div class="loading-aname">
+            </div>
+        </div>
+    </div>
+    <!--=------ 页面加载动态画面👆 --------------->
+
+    <!--------------- 左侧菜单栏👇 ------------------------>
+    
+    <div id=side>
+        <div class="r_m_div">
+            <a onclick="showAaplayer()"><i style="font-size: 20px;"><img
+                        src='https://anysword.com//media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
+        </div>
+        <div class="avatar-border">
+            <img src="https://anysword.com//images/avatar.png?v=1677346794173" class="avatar">
+        </div>
+        <div class="sitename">剑客</div>
+        <span class="description" data-text='["我有一宝剑，出自昆吾溪。照人如照水，切玉如切泥。"]'>&nbsp;</span>
+        <div class="siteinfocontainer">
+            <span class="siteinfo">文章</span>
+            <span class="siteinfo">标签</span>
+        </div>
+        <div class="siteinfocontainer">
+            <span class="siteinfo" id="siteinfo-postsnum"></span>
+            <span class="siteinfo">5</span>
+        </div>
+        
+        <div class="search">
+            <!-- <input type="text" class="search-input" placeholder="标题搜索(●'◡'●)" /> -->
+            <input type="text" class="search-input" placeholder="标题搜索 ⚆_⚆ つ♡">
+            <div class="search-results"></div>
+        </div>
+        
+    <div class="share-button">
+        <span>我的剑就是你的剑</span>
+        
+        <a href="https://github.com/ysy9703" target="_blank"><i style="font-size: 20px;"><img class="icon"
+                    src="https://anysword.com//media/images/github.png" alt=""></i></a>
+        
+        
+        <a onclick="showqq()"><i style="font-size: 20px;"><img class="icon"
+                    src="https://anysword.com//media/images/QQ.png" alt=""></i></a>
+        
+        
+        <a href="https://www.zhihu.com/people/ysy9703" target="_blank"><i style="font-size: 20px;"><img class="icon"
+                    src="https://anysword.com//media/images/zh.png" alt=""></i></a>
+        
+        
+        <a href="https://space.bilibili.com/10001754?spm_id_from=333.1007.0.0" target="_blank"><i style="font-size: 20px;"><img class="icon"
+                    src="https://anysword.com//media/images/bilibili.png" alt=""></i></a>
+        
+        
+        <a onclick="showWechat()"><i style="font-size: 20px;"><img class="icon"
+                    src="https://anysword.com//media/images/wechat.png" alt=""></i></a>
+        
+        
+        <a href="https://weibo.com/ysy9703" target="_blank"><i style="font-size: 20px;"><img class="icon"
+                    src="https://anysword.com//media/images/weibos.png" alt=""></i></a>
+        
+        
+        <a href="/post/yin-cang" target="_blank"><i style="font-size: 20px;"><img class="icon"
+                    src="https://anysword.com//media/images/wyy.png" alt=""></i></a>
+        
+        
+        <a href="https://steamcommunity.com/profiles/76561198244709948/" target="_blank"><i style="font-size: 20px;"><img class="icon"
+                    src="https://anysword.com//media/images/steam.png" alt=""></i></a>
+        
+    </div>
+    <div id="qq" style="display:none">840414973</div>
+    <!------------ 加载菜单按钮👇 ------------------------->
+    <div class="menucontainer">
+        
+        
+        <div class="mchocie description">
+            <a data-pjax href="/" class="menubutton" style="margin-right: 15px;">
+                <i><img class="icon menuicon" src="" alt="首页"></i>&nbsp;<span
+                    data-text="首页">首页</span>
+            </a>
+        </div>
+        
+        
+        
+        <div class="mchocie description">
+            <a data-pjax href="/tags" class="menubutton" style="margin-right: 15px;">
+                <i><img class="icon menuicon" src="" alt="标签"></i>&nbsp;<span
+                    data-text="标签">标签</span>
+            </a>
+        </div>
+        
+        
+        
+        <div class="mchocie description">
+            <a data-pjax href="/post/gong-ju" class="menubutton" style="margin-right: 15px;">
+                <i><img class="icon menuicon" src="" alt="工具"></i>&nbsp;<span
+                    data-text="工具">工具</span>
+            </a>
+        </div>
+        
+        
+        
+        <div class="mchocie description">
+            <a data-pjax href="/post/zi-yuan" class="menubutton" style="margin-right: 15px;">
+                <i><img class="icon menuicon" src="" alt="资源"></i>&nbsp;<span
+                    data-text="资源">资源</span>
+            </a>
+        </div>
+        
+        
+        
+        <div class="mchocie description">
+            <a data-pjax href="/post/xue-xi" class="menubutton" style="margin-right: 15px;">
+                <i><img class="icon menuicon" src="" alt="学习"></i>&nbsp;<span
+                    data-text="学习">学习</span>
+            </a>
+        </div>
+        
+        
+        
+        <div class="mchocie description">
+            <a data-pjax href="/post/sheng-huo" class="menubutton" style="margin-right: 15px;">
+                <i><img class="icon menuicon" src="" alt="生活"></i>&nbsp;<span
+                    data-text="生活">生活</span>
+            </a>
+        </div>
+        
+        
+        
+        <div class="mchocie description">
+            <a data-pjax href="/post/yu-le" class="menubutton" style="margin-right: 15px;">
+                <i><img class="icon menuicon" src="" alt="娱乐"></i>&nbsp;<span
+                    data-text="娱乐">娱乐</span>
+            </a>
+        </div>
+        
+        
+        
+        <div class="mchocie description">
+            <a data-pjax href="/archives" class="menubutton" style="margin-right: 15px;">
+                <i><img class="icon menuicon" src="" alt="归档"></i>&nbsp;<span
+                    data-text="归档">归档</span>
+            </a>
+        </div>
+        
+        
+        
+        <div class="mchocie description">
+            <a data-pjax href="/post/about" class="menubutton" style="margin-right: 15px;">
+                <i><img class="icon menuicon" src="" alt="关于"></i>&nbsp;<span
+                    data-text="关于">关于</span>
+            </a>
+        </div>
+        
+        
+
+        
+        
+        
+        <!--  -->
+    </div>
+    <!------------ 加载菜单按钮👆 ------------------------->
+    <hr>
+    <style>
+    .copyright {
+        font-size: 15px;
+        color: #d9d9d9;
+    }
+
+
+    @media screen and (min-width: 1200px) {
+        .foot {
+            width: 100%;
+            height: 130px;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .foot {
+            display: none;
+        }
+    }
+</style>
+
+<body>
+    <div class="foot">
+        <div id="footinfo">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | Theme: <a
+                href="https://github.com/850552586/gridea-theme-fog">Fog</a>
+            <div>
+                
+                <div id="sitegotimeDate">载入天数...</div>
+                <div id="sitegotimes">载入时分秒...</div>
+                <div id="cussitetime" style="display:none">02/2/2023</div>
+                
+            </div>
+            <div>
+                
+                <script async
+                    src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/busuanzi.pure.mini.js"></script>
+                <div id="vistornum" style="margin:0">
+                    <span id="busuanzi_container_site_uv">
+                        <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i> 总访问量:<span
+                            id="busuanzi_value_site_pv"></span>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <i class="fa fa-user-o" aria-hidden="true"></i> 访问人数:<span id="busuanzi_value_site_uv"></span>
+                    </span>
+                </div>
+                
+            </div>
+            <div class="copyright" style="color:white;text-align: center;">
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+
+<script>
+    //----------------------站点运行时间
+    var now = new Date();
+
+    function createtime() {
+        var sitegotime = document.getElementById("cussitetime").innerHTML + " 00:00:00";
+        var grt = new Date(sitegotime); //此处修改你的建站时间或者网站上线时间 
+        now.setTime(now.getTime() + 250);
+        days = (now - grt) / 1000 / 60 / 60 / 24;
+        dnum = Math.floor(days);
+        hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+        hnum = Math.floor(hours);
+        if (String(hnum).length == 1) {
+            hnum = "0" + hnum;
+        }
+        minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes);
+        if (String(mnum).length == 1) {
+            mnum = "0" + mnum;
+        }
+        seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds);
+        if (String(snum).length == 1) {
+            snum = "0" + snum;
+        }
+        document.getElementById("sitegotimeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
+        document.getElementById("sitegotimes").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+
+    let intervalId = setInterval("createtime()", 250);
+</script>
+
+    </div>
+
+    <img class="moon" src="https://anysword.com//media/images/moon.png" onclick="moonlight()">
+    <script src="https://anysword.com//media/js/wordshow.js"></script>
+    
+    <!--------------- 左侧菜单栏👆 ------------------------>
+
+    <!----------------- 顶部菜单栏👇 ------------------------>
+    
+    <!----------------- 顶部菜单栏👆 ------------------------>
+
+<!--核心功能加载-->
+<script src="https://anysword.com//media/js/mainfunc.js"></script>
+
+<!------------- Fog1.0版本彩蛋👇 -------------->
+    <!-- <section id="terrestrial" class="popup">
+        <a href="#" class="back">&lt; back</a>
+    </section>
+
+    <div class="flycontainer">
+        <div class="flyword">御风飞行中...</div>
+    </div>
+
+    <script>
+        $("#fog_go").click(function(){fog_go()});
+        async function fog_go(){
+            $(".bars").hide()
+            $("#live2d").hide()
+            await sleep(3000);
+            $(".flycontainer").css("display","flex");
+            $(".popup").fadeOut(500)
+            await sleep(2000);
+            var sitename = "剑客";
+            getFogUser(sitename);
+        }
+
+        function fog_goregis(){
+            var sitename = "剑客";
+            var siteurl = "https://anysword.com/";
+            regisFogUser(sitename,siteurl);
+        }
+        fog_goregis();
+    </script> -->
+<!------------- Fog1.0版本彩蛋👆 -------------->
+<script>
+    function change_topmenu(){
+        tmcolor = "antiquewhite"
+        tsnamecolor = "antiquewhite"
+        $(".navbar-inverse .navbar-nav>li>a").css("color",tmcolor)
+        $(".navbar-inverse .navbar-brand").css("color",tsnamecolor)
+        $(".navbar-fixed-top").css("border-radius","0 0 10px 10px")
+    }
+</script>
+
+<!------ 根据自定义配置声明变量👇 --------------------->
+    
+    <script>
+        var postnumChoice = true
+    </script>
+    
+    
+    <script>
+        var shareChoice = true
+    </script>
+    
+    
+    <script>
+        var donateChoice = true
+    </script>
+    
+    
+    <script>
+        var searchChoice = true
+    </script>
+    
+    <script>let postsnum = 0;</script>
+    <div id="side-posttitle" style="display: none;">
+    
+    
+    
+    
+    
+    
+    漫画
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    动画
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    社交
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    科研
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    下载
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    游戏
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    博客
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    翻墙
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    油猴
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    
+    
+    工具
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    资源
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    学习
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    生活
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    娱乐
+    <script>
+        postsnum += 1
+    </script>
+    
+    
+    
+    
+    </div>
+    
+        <script>
+            var menupos = 'left';
+            $("#siteinfo-postsnum").html(postsnum);
+        </script>
+    
+    <script>
+        let commentsHide = false
+    </script>
+    <!------ 根据自定义配置声明变量👆 --------------------->
+
+
+    <!----------根据自定义配置设置图标信息👇---------->
+    <script>
+        var icondict = new Array();
+    </script>
+    
+        
+    
+    <!----------根据自定义配置设置图标信息👆---------->
+</body>
+
+<script src="https://anysword.com//media/share/dist/Share.js"></script>
+<!-- 页面pjax测试 -->
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.js"></script>
+<!--确保jQuery已经在此之前加载-->
+<!-- <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script> -->
+<script src="https://anysword.com//media/js/all-pjax.js"></script>
+<script>
+    //-------------------------------说说功能👇--------------------------------------
+    let talksall = [];
+    let talks = [];
+    let talkindex = 0;
+    get();
+
+    function get() {
+        var t = JSON.parse('[]');
+        talkindex = t.length - 1;
+        for (var i = 0; i <= t.length - 1; i++) {
+            var d = {};
+            d["time"] = t[i].time;
+            d["author"] = t[i].author;
+            d["text"] = t[i].text;
+            d["img"] = t[i].img;
+            talksall.push(d);
+        }
+    }
+
+    function add() {
+        for (var i = talkindex; i >= 0 && i > talkindex - 3; i--) {
+            talks.push(talksall[i]);
+        }
+        talkindex = (talkindex - 3) >= 0 ? (talkindex - 3) : -1;
+        if (talkindex < 0) $("#getmorebt").hide();
+        show();
+    }
+
+    function show() {
+        var talkT = document.getElementById("talkContainer");
+        talkT.innerHTML = "";
+        for (var i = 0; i < talks.length; i++) {
+            if (talks[i].img != '') {
+                talkT.innerHTML += '\
+            <div class="talk" v-for="t in talks"> \
+                <span data-fancybox="images" href="' + talks[i].img + '"><img src="' + talks[i].img + '" class="talkimg"></span> \
+                <div class="ainfo">\
+                    <div class="ainfo-intro">\
+                        <div class="author">' + talks[i].author + '</div>·\
+                        <div class="time">' + talks[i].time + '</div>\
+                    </div>\
+                </div>\
+                <div class="talkcontent">' + talks[i].text + '\
+                </div\>\
+            ';
+            } else {
+                talkT.innerHTML += '\
+            <div class="talk" v-for="t in talks"> \
+                <div class="ainfo">\
+                    <div class="ainfo-intro">\
+                        <div class="author">' + talks[i].author + '</div>·\
+                        <div class="time">' + talks[i].time + '</div>\
+                    </div>\
+                </div>\
+                <div class="talkcontent">' + talks[i].text + '\
+                </div\>\
+            ';
+            }
+        }
+    }
+    //-------------------------------说说功能👆--------------------------------------
+</script>
+
+<!---->
+<script>
+    function replaceAvatar() {
+        twikoo_avatar = $(".tk-avatar-img");
+        for (var i = 0; i < twikoo_avatar.length; i++) {
+            var asrc = twikoo_avatar.eq(i).attr('src');
+            if (asrc.search('cn.gravatar.com') != -1) {
+                twikoo_avatar.eq(i).attr('src', 'https://anysword.com//media/images/comavatar.png');
+            }
+        }
+    }
+
+    function showWechat() {
+        var wechat = 'ysy840414973';
+        alert("博主微信号：" + wechat);
+        return false;
+    }
+</script>
+
+<script>
+    /**
+     * https://github.com/tangkaichuan/gridea-search
+     */
+    // 检查缓存是否最新
+    function checkCache() {
+        var caches_postsnum = localStorage.getItem("postsnum");
+        var pt = document.getElementById("side-posttitle").innerHTML;
+        pt = pt.replace(/\s+/g, '').replace(/<script>.*?<\/script>/gi, "")
+        var ptlen = pt.length;
+        var ptlen_storage = localStorage.getItem("poststitlelen");
+        if (caches_postsnum != postsnum || ptlen != ptlen_storage) {
+            console.log("更新缓存");
+            return false
+        }
+        return true;
+    }
+
+    (function () {
+        var CACHES = checkCache()
+        if (!CACHES) {
+            var NOW = Date.now()
+            var API_CONTENT = '../api-content/index.html' + '?_=' + NOW
+            preload(API_CONTENT);
+            getContents(show_getContentresult);
+        }
+
+        function show_getContentresult(data) {
+            console.log("获取成功");
+            var postslen = data["posts"].length;
+            localStorage.setItem('postsnum', postslen);
+            var poststitlelen = 0;
+            var pt = document.getElementById("side-posttitle").innerHTML;
+            pt = pt.replace(/\s+/g, '').replace(/<script>.*?<\/script>/gi, "");
+            localStorage.setItem('poststitlelen', pt.length);
+        }
+
+
+
+        // preload
+        function preload(url) {
+            var preloadLink = document.createElement('link')
+            preloadLink.href = url
+            preloadLink.rel = 'preload'
+            preloadLink.as = 'fetch'
+            preloadLink.crossOrigin = 'anonymous'
+            document.head.appendChild(preloadLink)
+        }
+
+        // 异步 GET 请求
+        function get(obj) {
+            var xhr = new XMLHttpRequest()
+            xhr.open('get', obj.url, true)
+            xhr.send(null)
+            xhr.onreadystatechange = function () {
+                // 异步请求：响应状态为4，数据加载完毕
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        obj.success(xhr.responseText)
+                    } else {
+                        obj.error(xhr.status)
+                    }
+                }
+            }
+        }
+
+        // 获取博客全文 api
+        function getContents(callback) {
+            if (CACHES) {
+                callback(CACHES.contents)
+            } else {
+                get({
+                    url: API_CONTENT,
+                    success: function (data) {
+                        callback(JSON.parse(data));
+                        localStorage.setItem('ContentsCache', data);
+                        getStorageContent();
+                    }
+                })
+            }
+        }
+    })()
+    //------------------------核心功能--pjax全局渲染👇-------------------
+    let talkinit = false;
+    $(document).pjax('a[data-pjax]', '#main', {
+        fragment: '#main',
+        timeout: 8000
+    }).on('pjax:complete', function () {
+        //代码块高亮渲染
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
+        //文章热度
+        if(postnumChoice){
+            getHotnum();
+        }
+        //文章索引
+        toginit();
+        //清空搜索栏
+        if (searchChoice) {
+            searchInit();
+            searchInput.value = "";
+        }
+        var pl = window.location.pathname;
+        //说说更新
+        if (pl.search("talk") != -1 && !talkinit) {
+            add();
+            talkinit = true;
+        } else if (pl.search("talk") != -1) {
+            show();
+        }
+        if (pl.search("post") != -1) {
+            if (shareChoice)
+                shareInit();
+            if (donateChoice)
+                donateInit();
+            if ("default" == "default"&&!commentsHide) {
+                $("#comment").hide()
+                commentsHide = true
+            }
+            lazyload();
+            codeinit();
+            if ("default" == "twikoo") {
+                //twikoo头像更换
+                setTimeout(replaceAvatar, 3000);
+                setTimeout(replaceAvatar, 8000); //部分博主站点速度加载过慢，再添加一个延迟
+            }
+        }
+        if (btstate == true)
+            dropdown();
+    }).on('pjax:start', function () {
+        $(".pjaxloading").fadeIn(50);
+    }).on('pjax:end', function () {
+        $(".pjaxloading").fadeOut(50);
+    });
+    //------------------------核心功能--pjax全局渲染👆-------------------
+
+    //-------------------------------------------------搜索
+    // 获取搜索框、搜索按钮、清空搜索、结果输出对应的元素
+    if (searchChoice) {
+        var searchInput = document.querySelector('.search-input');
+        var searchResults = document.querySelector('.search-results');
+    }
+    // 申明保存文章的标题、链接、内容的数组变量
+    var searchValue = '',
+        arrItems = [],
+        arrLinks = [],
+        arrTitles = [],
+        arrContents = [],
+        arrResults = [],
+        indexItem = [],
+        itemLength = 0;
+    var tmpDiv = document.createElement('div');
+    tmpDiv.className = 'result-item';
+
+
+    function getStorageContent() {
+        var data = localStorage.getItem('ContentsCache');
+        data = JSON.parse(data);
+        posts = data["posts"];
+        for (var i = 0; i < posts.length; i++) {
+            arrLinks[i] = posts[i].link;
+            arrTitles[i] = posts[i].title;
+            arrContents[i] = posts[i].content;
+            itemLength++;
+        }
+    }
+    if (checkCache())
+        getStorageContent();
+    // 输入框内容变化后就开始匹配，可以不用点按钮
+    // 经测试，onkeydown, onchange 等方法效果不太理想，
+    // 存在输入延迟等问题，最后发现触发 input 事件最理想，
+    // 并且可以处理中文输入法拼写的变化
+    searchInput.oninput = function () {
+        setTimeout(searchConfirm, 0);
+    }
+    searchInput.onfocus = function () {
+        searchResults.style.display = 'block';
+    }
+
+    function searchConfirm() {
+        if (searchInput.value == '') {
+            searchResults.style.display = 'none';
+        } else if (searchInput.value.search(/^\s+$/) >= 0) {
+            // 检测输入值全是空白的情况
+            searchInit();
+            var itemDiv = tmpDiv.cloneNode(true);
+            itemDiv.innerText = '请输入有效内容...';
+            searchResults.appendChild(itemDiv);
+        } else {
+            // 合法输入值的情况
+            searchInit();
+            searchValue = searchInput.value;
+            // 在标题、内容中查找
+            searchMatching(arrTitles, arrContents, searchValue);
+        }
+    }
+
+    // 每次搜索完成后的初始化
+    function searchInit() {
+        arrResults = [];
+        indexItem = [];
+        searchResults.innerHTML = '';
+        searchResults.style.display = 'block';
+    }
+
+    function searchMatching(arr1, arr2, input) {
+        // 忽略输入大小写
+        input = new RegExp(input, 'i');
+        var step = 10;
+        // 在所有文章标题、内容中匹配查询值
+        for (i = 0; i < itemLength; i++) {
+            var indexContent = arr2[i].search(input);
+            //标题匹配
+            if (arr1[i].search(input) != -1) {
+                indexItem.push(i); // 保存匹配值的索引
+                if (indexContent != -1) {
+                    startindex = (indexContent - step) >= 0 ? (indexContent - step) : 0;
+                    var searchcontent = arr2[i].slice(indexContent - step, indexContent + 5)
+                    arrResults.push("....." + searchcontent + ".....");
+                } else
+                    arrResults.push("");
+            }
+            //内容匹配
+            else if (indexContent != -1) {
+                indexItem.push(i); // 保存匹配值的索引
+
+                startindex = (indexContent - step) >= 0 ? (indexContent - step) : 0;
+                var searchcontent = arr2[i].slice(indexContent - step, indexContent + 5)
+                arrResults.push("....." + searchcontent + ".....");
+            }
+        }
+
+        // 输出总共匹配到的数目
+        var totalDiv = tmpDiv.cloneNode(true);
+        totalDiv.innerHTML = '<b>总匹配：' + indexItem.length + ' 项<hr></b>';
+        searchResults.appendChild(totalDiv);
+
+        // 未匹配到内容的情况
+        if (indexItem.length == 0) {
+            var itemDiv = tmpDiv.cloneNode(true);
+            itemDiv.innerText = '未匹配到内容...';
+            searchResults.appendChild(itemDiv);
+        }
+
+        // 将所有匹配内容进行组合
+        for (i = 0; i < arrResults.length; i++) {
+            var itemDiv = tmpDiv.cloneNode(true);
+            itemDiv.innerHTML = '<a data-pjax class="searchresults" href="' + arrLinks[indexItem[i]] + '"><b>[' +
+                arrTitles[indexItem[i]] +
+                ']</b><p>' + arrResults[i] + '</p></a><hr />';
+            searchResults.appendChild(itemDiv);
+        }
+    }
+</script>
+
+
+
+<!--------------------- 菜单栏图标加载功能👇 ----------------------->
+<script>
+var menulist = $(".menuicon");
+var menulength = menulist.length;
+for (var i = 0; i < menulength; i++) {
+    var altname = menulist.eq(i).attr("alt");
+    var iconurl = icondict[altname];
+    if (iconurl == undefined || iconurl == '')
+        continue;
+    if (iconurl == 'Home') {
+        menulist.eq(i).attr("src", "https://anysword.com//media/images/Home.png");
+menulist.eq(i).show();
+} else if (iconurl == 'Archive') {
+menulist.eq(i).attr("src", "https://anysword.com//media/images/Archive.png");
+menulist.eq(i).show();
+} else if (iconurl == 'Tag') {
+menulist.eq(i).attr("src", "https://anysword.com//media/images/Tag.png");
+menulist.eq(i).show();
+} else if (iconurl == 'About') {
+menulist.eq(i).attr("src", "https://anysword.com//media/images/About.png");
+menulist.eq(i).show();
+} else if (iconurl == 'Talk') {
+menulist.eq(i).attr("src", "https://anysword.com//media/images/Talk.png");
+menulist.eq(i).show();
+} else if (iconurl == 'Friends') {
+menulist.eq(i).attr("src", "https://anysword.com//media/images/Friends.png");
+menulist.eq(i).show();
+} else if (iconurl == 'Fly') {
+menulist.eq(i).attr("src", "https://anysword.com//media/images/wind.png");
+menulist.eq(i).show();
+} else {
+menulist.eq(i).attr("src", iconurl);
+menulist.eq(i).show();
+}
+}
+</script>
+<!--------------------- 菜单栏图标加载功能👆 ----------------------->
+
+<script>
+    //--------------------bber-onetalk加载👇--------------------------------
+    function bberonetalkLoad(){
+        bberjsonurl = '';
+        if ( $("#bber-talk").length > 0 ) {
+        jsonUrl = bberjsonurl
+        $.getJSON(jsonUrl+"?t="+Date.parse( new Date()),function(res){
+        var bberHtml = ''
+        $.each(res.data, function(i, item){
+            d = new Date(item.date)
+            date = d.getFullYear()+'/'+(d.getMonth()+1)+'/'+d.getDate() +' '+d.getHours()+':'+d.getMinutes()+':'+d.getSeconds()
+            dataTime = '<span class="datatime">'+date+'</span>'
+            bberHtml += '<li class="item item-'+(i+1)+'">'+dataTime+'： <a data-pjax href="https://anysword.com//bber">'+item.content+'</a></li>'
+        });
+        $('#bber-talk').append('<span class="index-talk-icon"><svg viewBox="0 0 1024 1024" width="21" height="21"><path d="M184.32 891.667692c-12.603077 0-25.206154-2.363077-37.809231-7.876923-37.021538-14.966154-59.864615-49.624615-59.864615-89.009231v-275.692307c0-212.676923 173.292308-385.969231 385.969231-385.969231h78.76923c212.676923 0 385.969231 173.292308 385.969231 385.969231 0 169.353846-137.846154 307.2-307.2 307.2H289.083077l-37.021539 37.021538c-18.904615 18.116923-43.323077 28.356923-67.741538 28.356923zM472.615385 195.347692c-178.018462 0-322.953846 144.935385-322.953847 322.953846v275.692308c0 21.267692 15.753846 29.144615 20.48 31.507692 4.726154 2.363077 22.055385 7.876923 37.021539-7.08923l46.473846-46.473846c6.301538-6.301538 14.178462-9.452308 22.055385-9.452308h354.461538c134.695385 0 244.184615-109.489231 244.184616-244.184616 0-178.018462-144.935385-322.953846-322.953847-322.953846H472.615385z"></path><path d="M321.378462 512m-59.076924 0a59.076923 59.076923 0 1 0 118.153847 0 59.076923 59.076923 0 1 0-118.153847 0Z"></path><path d="M518.301538 512m-59.076923 0a59.076923 59.076923 0 1 0 118.153847 0 59.076923 59.076923 0 1 0-118.153847 0Z"></path><path d="M715.224615 512m-59.076923 0a59.076923 59.076923 0 1 0 118.153846 0 59.076923 59.076923 0 1 0-118.153846 0Z"></path></svg></span><ul class="talk-list">'+bberHtml+'</ul>')
+        //Lately({ 'target': '#bber-talk .datatime' });
+        });
+        function Roll (){
+        var list_li = $('.talk-list li'),cur_li = list_li.first(),last_li = list_li.last();
+        last_li.after(cur_li);
+        };
+        setInterval(Roll,3000);
+    }
+    }
+  //--------------------bber-onetalk加载👆--------------------------------
+</script>
+
+<script>
+    var ClicksideState = 1
+    var cur_readingmode = false
+    function readingmode(){
+        if (!cur_readingmode){
+            if(menupos == 'left'){
+                if(ClicksideState==1)
+                menu_openclose1()
+            }
+            $("#tab1").fadeOut(50)
+            $("#bg").fadeOut(50)
+            $(".navbar").fadeOut(50)
+            $(".markdownIt-TOC li a").css("color","black")
+            cur_readingmode = true
+        }else{
+            if(menupos == 'left'){
+                if(ClicksideState==0)
+                    menu_openclose1()
+            }
+            $("#tab1").fadeIn(50)
+            $("#bg").fadeIn(50)
+            $(".navbar").fadeIn(50)
+            $(".markdownIt-TOC li a").css("color","antiquewhite")
+            cur_readingmode = false  
+        }
+    }
+</script>
+
+
+<!----夜间模式👇-->
+<script>
+    var moonlightState = false
+    function moonlight(){
+        if(!moonlightState){
+            $("#bg").fadeOut(200)
+            $('body').css("background","rgba(0,0,0,0.8)")
+            $(".markdownIt-TOC li a").css("color","white")
+            $(".text p, .text ul").css("color","white")
+            $("#articlecontent").css("color","white")
+            $(".post-copyright").css("background","rgba(10,10,10,0.5)")
+            $('blockquote').css("background","rgba(10,10,10,0.6)")
+            $("#articlecontent").css("background","rgba(10,10,10,0.5)")
+            moonlightState = true
+            $(".moon").attr("src","https://anysword.com//media/images/sun.png")
+        }else{
+            $("#bg").show()
+            $(".markdownIt-TOC li a").css("color","antiquewhite")
+            $(".text p, .text ul").css("color","rgba(0, 0, 0, 0.7)")
+            $("#articlecontent").css("color","black")
+            $(".post-copyright").css("background","#f9f9f9")
+            $('blockquote').css("background","#eff8f0")
+            $("#articlecontent").css("background","white")
+            $(".moon").attr("src","https://anysword.com//media/images/moon.png")
+            $('body').css("background","white")
+            moonlightState = false
+        }
+    }
+</script>
+<!----夜间模式👆--></div>
+            <!--------------- pc端菜单栏👆 ---------------->
+
+            <!-- ----------------左侧菜单栏html 👇-------------------------------------->
+            
+            <div>
+                <div id="tab1" class="tab">
+                    <div class="bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="close"></div>
+                </div>
+                <div class="col-md-1 col-lg-3"></div>
+                <!-- main标签，pjax渲染时加载以下内容👇 -->
+                <div id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-7" style="padding:0;">
+                    <div class="readingmode" onclick="readingmode()">阅</div>
+                    <link rel="stylesheet" href="https://anysword.com//media/css/font-awesome.css">
+
+<body>
+    <div class="allcontent" id="postdetail">
+        <div class="postshow postpadding" style="padding-bottom: 0;">
+            
+            <div class="postdetailimg">
+                <img src="https://s2.loli.net/2023/02/05/ardsBny69Ec3tNS.jpg" class="postimage" style="cursor:auto">
+            </div>
+            <div class="postinfo-detail">
+                <div class="postdate"><i class="fa fa-calendar"></i>2023-02-03</div>
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 18 min read</div>
+                <div class="posttag">
+                    
+                    <a data-pjax href="https://anysword.com/tag/GyMoUh3hU/" class="postlink">
+                        <i class="fa fa-tag"></i> 资源
+                    </a>
+                    
+                </div>
+            </div>
+            
+        <div id="articlecontent">
+            <div id="texttitle" style="text-align: center">
+                <h2 id="ptitle">资源</h2>
+                <!-- id 将作为查询条件 -->
+                <div id="pl" style="display:none">https://anysword.com/post/zi-yuan/</div>
+                <div id="rootaddr" style="display:none">https://anysword.com/</div>
+                
+                    
+                
+            </div>
+            <div class="text ">
+                <p>VCB-Studio - 大家一起实现的故事！ https://vcb-s.com/<br>
+VCB-Studio Project Tracker - Google 表格 https://docs.google.com/spreadsheets<br>
+/d/1mEqjCEHe0D_8bPkpcuuECxGZva-jSg3Z3Sc0u3tpZns/edit#gid=766492382<br>
+(vcb有其他播放器的教程哒，不一定要dandanplay)<br>
+弹弹play - 全功能“本地视频+弹幕”播放器 https://www.dandanplay.com/<br>
+YYeTs 人人影视|字幕组官方站 https://www.yysub.net/<br>
+7-Zip 官方中文网站 https://sparanoid.com/lab/7z/</p>
+<p>音乐动漫各种（磁链+网盘）：<br>
+天使动漫 https://www.tsdm39.net/forum.php （网盘为主）<br>
+二次元虫洞_动漫 游戏下载 新番动漫音乐 完结动漫 http://www.2cycd.com/</p>
+<p>磁链网站：<br>
+萌番组 https://bangumi.moe/<br>
+末日動漫資源庫 - Project AcgnX Torrent Asia https://share.acgnx.se/<br>
+DMHY https://share.dmhy.org/<br>
+Browse :: Nyaa https://nyaa.si/<br>
+Browse :: Sukebei https://sukebei.nyaa.si/<br>
+Tokyo Toshokan :: #tokyotosho @ irc.rizon.net :: Torrent Listing https://www.tokyotosho.info/<br>
+IACG.RIP https://iacg.rip/<br>
+＊MioBT＊ http://miobt.com/<br>
+漫猫动漫BT下载 http://comicat.org/<br>
+爱恋动漫BT下载 http://www.kisssub.org/<br>
+诸神字幕组 https://subs.kamigami.org/<br>
+ACG.RIP https://acg.rip/<br>
+菲特动漫 - 动画|新番|动画音乐|日剧|下载|BT|BT下载|磁链|迅雷|免费|资源|菲特动漫|fitacg https://fitacg.com/<br>
+动漫领域 - DMLY | 动漫、漫画、音乐、游戏资源网，动漫花园镜像站<br>
+https://dmly.me/<br>
+森之屋动漫 https://www.acgsen.com/<br>
+（本体变成了稀饭动漫，森之屋现在是磁链网站）<br>
+次元計劃 - 二次元資源搜索 https://acg02.cc/<br>
+蜜柑计划 - Mikan Project https://mikanani.me/ （辣鸡）<br>
+BT下载|动漫下载|动画|漫画 - 简单动漫 https://www.36dm.club/<br>
+Anime字幕论坛 - Powered by Discuz! https://bbs.acgrip.com/（VCB对应的字幕论坛）<br>
+千夏町 - 千夏字幕组官方论坛 - Powered by Discuz! https://www.airota.net/bbs/<br>
+首页 - 射手网(伪) - assrt.net - 字幕下载，字幕组，中文字幕，美剧字幕，英剧字幕，双语字幕，新番字幕 https://assrt.net/<br>
+分享交流下载字幕平台 - SubHD https://subhd.tv/<br>
+字幕库(zimuku) -- 字幕下载网站 http://zimuku.org/<br>
+茶杯狐 Cupfox - 努力让找电影变得简单 https://cupfox.app/ （有跳转插件，很牛逼，各种乱七八糟的电影网，网盘磁链都有）<br>
+小纸条-开放纯粹的资源网站 https://u.gitcafe.net/（阿里云盘专用）<br>
+BTSOW https://www.btsow.vip/<br>
+磁力熊 - 豆瓣高分电影1080P高清磁力下载 https://www.cilixiong.com/<br>
+移花宫 https://xn--7ovz63g.com/<br>
+Bt磁力搜索 看电影www.watchdy.top https://www.watchdy.top/Home/BtIndex<br>
+SpPlan - 色批计划! https://www.spplan.xyz/#/side<br>
+网盘搜索-小白盘 https://www.xiaobaipan.com/ （很牛逼）<br>
+橘子盘搜-好用的影视资源搜索引擎 https://www.nmme.cc/ （很牛逼）<br>
+集芳阁云搜 - 搜你所想，看你想看 https://xn---jfgsoucom-xo3rt4olv7g07mz39a.www-jifangg.com/ （还行）<br>
+影视录-电影天堂,免费电影下载,最新电视剧下载,迅雷磁力下载,蓝光高清免费在线观看https://quanyingshi.com/ （很牛逼）<br>
+电影狗 - 专业电影搜索引擎 https://www.dianyinggou.com/ （很牛逼）<br>
+ACG盒子 - 专注ACG的导航盒子 https://www.acgbox.link/ （导航，表）<br>
+ACG喵导航 - 专注ACG的喵喵喵导航 https://www.miaoaaa.com/ （导航，里）<br>
+皮皮虾资源 – 愿所有电影都能与你不期而遇 https://ppxzy.co/ （冷门电影都能搜出来）</p>
+<p>HACG：<br>
+Hanime1.me https://hanime1.me/<br>
+南北魂+论坛  https://www.spring-plus.net/index.php（比较全的H漫更新，整齐有序，硬核配件是飞猫盘和百度云，百度云秒传，具体插件脚本看接下来另一版块，n个相似域名）<br>
+友情推荐两篇：<br>
+https://www.spring-plus.net/read.php?tid-1421320.html<br>
+https://www.spring-plus.net/read.php?tid=1452622<br>
+绅士漫画 https://www.wnacg.org/ （支持在线H漫观看，PC端和手机端皆可，更新速度快，且全面，有打包下载功能，且支持网页保存+Picview插件批量打包，详情见插件版块）<br>
+同人誌裱紙 https://hentai-covers.site/<br>
+Hentai2.net https://www2.hentai2.net/ 在线阅读网站<br>
+免費A漫 - 禁漫天堂 https://18comic.vip/（某著名在线看漫画网站，请注意，如需要下载，登陆且线程较差，下载出来看着像是乱码，其实是需要另存为文件后改成压缩包）<br>
+E-Hentai  https://e-hentai.org/<br>
+琉璃神社  https://www.hacg.cat/index.html<br>
+琉璃神社 白 https://hacgapp.net/wp/#wy（没啥太大区别）<br>
+IACG.RIP https://iacg.rip/<br>
+Browse :: Sukebei  https://sukebei.nyaa.si/ （里站）<br>
+猫之秋名山  https://sakura.myacgcat.top/ (社区)<br>
+Hanime.tv  https://hanime.tv/（当做备用）<br>
+18H在线看漫画 https://18h.animezilla.com/（备用）<br>
+推荐榜 https://theporndude.com/zh<br>
+推荐导航 https://porntw.xyz/zh-hans<br>
+177pica  http://www.177pica.com/(备用，某些稀缺资源还是可以的）<br>
+nhentai(本尊+马甲)+疑似盗版nyahentai不过也还能用<br>
+https://nhentai.xxx/、https://nhentai.net/、https://nyahentai.red/、https://nyahentai.info/<br>
+PICACG哔咔漫画 https://picacn.xyz/<br>
+EhViewer下载 http://www.ehviewer.com/download<br>
+ISEKAI - 免費線上動畫漫畫（本尊+备用）<br>
+https://isekai.ch/、https://isekai.ee/<br>
+爱弹幕小导航 https://idanmu.pages.dev/（备用）<br>
+二次元下午茶 | 里番|同人|画集|CG|萌图 https://www.teaqqq.com/（小型私人茶会）<br>
+妖次元里番 https://www.ycylf.net/<br>
+妖次元漫画 https://mh.yaociyuan.fun/<br>
+ようこそ、紳士会所へ！ https://www.sshs.pw/ （绅士会所总部）<br>
+https://www.sshs.club/ 、https://www.hentaiclub.net/categ ... AC%A1%E5%85%83.html（有和琉璃神社差不多的月更合集）<br>
+免费COS-MFCOS https://www.mfcos.com/</p>
+<p>阅读部分:<br>
+HPOI手办WIKI：https://www.hpoi.net/index/home，另外补充两个常用：<br>
+https://www.amiami.com/eng/,https://myfigurecollection.net/</p>
+<p>咨询类：<br>
+鱼塘热榜 https://mo.fish/<br>
+Animex动漫社 http://www.animetox.com/<br>
+和谐社 https://www.hexieshe.cn/</p>
+<p>RSS阅读器：<br>
+不懂的同学先去看一下，很简单的一个东西 https://www.bilibili.com/read/cv5895599/<br>
+文章里的中文json：<br>
+https://raw.githubusercontent.co ... o-locale-zh_CN.json<br>
+这里先具体讲一下RSS，Feedbro首先是很顶尖的一个实现工具，就挂在浏览器里用，现在的同学可能很喜欢用B站的动态或者相似的东西，有没有想过在一个插件里实现对不止B站内容的跟踪推送，而是多个网站的追踪并提醒内容更新，这就是RSS的存在意义，每天打开Feedbro，假设vpn是通的，就可以马上看到twi\facebook\bilibili等主流平台的更新内容（注意，不止是提醒你更新了内容，并且把你想看的内容挖出来以另一种排版方式实现推送，RSSHub就是这一种玩法。）<br>
+实际上，我们（二刺猿）最喜欢看到的画师twi\画师对应的画廊地址都是可以订阅的，通过RSS，我们可以实现对多个画师twi、多个声优、多个官方账号等内容进行监视。<br>
+RSShub文档: https://docs.rsshub.app/（有兴趣的请务必了解）<br>
+以上说到当今最重要的外网平台twi，但应该不少小伙伴对twi的登陆和搜索机制头疼，这里提供一个开源式的twi嫁接平台，那就是nitter。<br>
+Nitter Official: https://nitter.net/<br>
+非官方，用于（主攻日本）的nitter节点：https://twitter.076.ne.jp/<br>
+看不懂日本可以先参考其他的节点对应的文字（英文），设置都是大同小异的，<br>
+https://nitter.moezx.cc/（较稳定）<br>
+https://nitter.snopyta.org/（较稳定）<br>
+nitter可实现对twi内容的过滤、搜索，但是可能是基于不同服务器设置的标准时区不同，时间搜索功能是基本不可用的，而且会基于服务器所在的地区优先更新<br>
+至此，我们还可以优化，对所有的twi地址进行自动重定位，脚本如下：<br>
+https://greasyfork.org/zh-CN/scr ... ernative-redirector，<br>
+（增删查改一点点东西然后保存就完事了，他默认的是上面两个比较稳定的nitter，还有youtube和google也给你重定向了，不喜欢的可以删掉那几行代码）<br>
+twi分析网站：https://en.whotwi.com/</p>
+<p>pixiv:https://www.pixiv.net/<br>
+代理：https://pixiv.cat/（略慢，条件允许不推荐使用）<br>
+安卓端一次登陆傻瓜式平台PixShaft:<br>
+https://mikusa.lanzoui.com/b0757i3ne（pw:miku）</p>
+<p>进阶教程（先装油猴）：</p>
+<p>Pixiv Downloader<br>
+一键下载Pixiv各页面原图。支持多图下载，动图下载，画师作品批量下载。动图支持格式转换：Gif | Apng | Webm。下载的图片将保存到以画师名命名的单独文件夹（需要调整tampermonkey“下载”设置为“浏览器API”）。保留已下载图片的记录。<br>
+https://greasyfork.org/zh-CN/scripts/432150-pixiv-downloader</p>
+<p>Pixiv Previewer<br>
+显示预览图（支持单图，多图，动图）；动图压缩包下载；搜索页按热门度（收藏数）排序并显示收藏数。<br>
+https://greasyfork.org/zh-CN/scripts/30766-pixiv-previewer</p>
+<p>（注意：同时装两个，下载键会形同虚设，要调一下Previewer的设置，一般只开全尺寸预览和预览，排序自选。downloader可以调好点，命名规则可以自由选择，举个栗子 米山舞_DISCOVER_87603695_p0，自动命名自动在默认目录下生成文件夹，downloader如果不是网络差的原因嗝屁了，解决方法有：消除下载记录&amp;重装）</p>
+<p>轻小说文库：https://www.wenku8.net/index.php（一定要加index才能进，然后注册会员）<br>
+轻小说文库内部下载，用于已经显示被版权追究的部分轻小说全卷下载，<br>
+举个栗子，奇诺之旅，http://dl.wenku8.com/txtgbk/0/12.txt<br>
+轻之国度，一新一旧<br>
+https://www.lightnovel.us<br>
+https://obsolete1.lightnovel.us/<br>
+萌享：https://www.moeshare.cc/</p>
+<p>轻小说傻瓜式：<br>
+魔笔 https://www.mobinovels.com/<br>
+次元狗 https://www.acgndog.com/category/rec-comic<br>
+轻书架 https://www.lightnovel.app/home</p>
+<p>生肉网站，比较靠谱:<br>
+13DL - Raw Free Download https://13dl.me/home/<br>
+Read Free Manga Online - MangaFreak  https://w13.mangafreak.net/</p>
+<p>特立独行轻小说网站：轻之笔记 http://www.hanbao520.com/<br>
+http://www.hanbao520.com/document/26.html</p>
+<p>漫画下载工具：<br>
+傻瓜式 皮皮喵：https://vip.lanzoux.com/b932237<br>
+皮皮喵的订阅仓库 https://github.com/AcgLibrary/ppcat_store<br>
+坠牛的，Tachiyomi，https://tachiyomi.org/<br>
+对应扩展两份（github好像更新更快）：https://tachiyomi.org/extensions/<br>
+https://github.com/tachiyomiorg/ ... sions/tree/repo/apk</p>
+<p>在线漫画，也用于tachiyomi订阅:<br>
+热辣漫画，https://www.manga2022.com/（和拷贝同源只是多了R18付费，速度快）<br>
+拷贝漫画，https://www.copymanga.org/（比热辣慢）<br>
+Mangabz，https://www.mangabz.com/<br>
+漫画DB，https://www.manhuadb.com/（老漫画很棒）<br>
+动漫屋，https://www.dm5.com/（谁用谁知道）<br>
+Mox.moe，https://mox.moe/（你觉得行就行）<br>
+KuKu，http://manhua.ikukudm.com/（更得还挺快）<br>
+漫画柜，https://www.manhuagui.com/（经典，你觉得他又行了，你又得换节点了）<br>
+百年漫画，https://www.bnman.net/（寄了就寄了吧）<br>
+动漫狂，https://www.cartoonmad.com/（还行）</p>
+<p>重磅炸弹：<br>
+NClientV2，https://github.com/Dar9586/NClientV2/releases/（nhentai非官方客户端）<br>
+热辣漫画，https://github.com/hotmanga/hotmangaSite/releases（官方客户端）</p>
+<p>中国英雄必备模块，会这些，保证你教群友做人：<br>
+SauceNAO，https://saucenao.com/（常用，有次数限制，被锁了一天就换个节点）<br>
+Multi-service image search，https://iqdb.org/（可跳转SauceNAO,功能还行）<br>
+二次元画像詳細検索，https://ascii2d.net/（多数情况不用，是垃圾，俗称大二）<br>
+Anime Scene Search Engine ，https://trace.moe/（也就搜搜动画了，截图要按帧截好点）<br>
+搜图bot酱，https://soutubot.moe/（真正的对标nhentai搜本子的王者，谁用谁知道）<br>
+Kemono，https://kemono.party/（没什么，平平无奇的fanbox因果律武器罢了）</p>
+<p>画廊:<br>
+yande，https://yande.re/post<br>
+Danbooru: Anime Image Board ，https://danbooru.donmai.us/<br>
+| Gelbooru - Free Anime and Hentai Gallery https://gelbooru.com/index.php?page=post&amp;s=list&amp;tags=all<br>
+konachan.com - Konachan.com Anime Wallpapers，https://konachan.com/post<br>
+sakugabooru，https://www.sakugabooru.com/<br>
+Rule 34，https://rule34.xxx/index.php?page=post&amp;s=list&amp;tags=all<br>
+Hitomi.la，https://hitomi.la/（神秘网站，还挺全）<br>
+Baka-Updates Manga，https://www.mangaupdates.com/（国外漫画论坛）<br>
+动漫图片和壁纸，https://anime-pictures.net/（国内自嗨团体，低端，看看就好）<br>
+MikuTools - 一个轻量的工具集合，https://tools.miku.ac/（杂货铺，可用）<br>
+主要用yande，Danbooru，其他的各有长处。</p>
+<p>搜图:<br>
+谷歌搜图，https://www.google.com/imghp?hl=zh-CN&amp;ogbl<br>
+Yandex搜图，https://yandex.com/images/（毛子的搜图有时堪比因果律武器）</p>
+<p>图床:<br>
+TurboImageHost，https://www.turboimagehost.com/<br>
+Catbox，https://catbox.moe/#<br>
+PiXhost - Free Image Hosting，https://pixhost.to/<br>
+ImgBB — 免费图片存取/上传图片，https://imgbb.com/<br>
+图床测评 - Google 表格（就是以前那个）<br>
+https://docs.google.com/spreadsh ... x2daKM9M/edit#gid=0</p>
+<p>动画情报：<br>
+bangumi我就不说了，略，<br>
+萌娘百科：https://zh.moegirl.org.cn/Mainpage<br>
+うずらインフォ トップページ，http://uzurainfo.han-be.com/（老人可能觉得眼熟的网站，就是以前长条式更新每个季度情报的那个网站，几年前不做了，情报还在）<br>
+新作アニメ一覧画像まとめ | :: halation ghost ::，https://elf-mission.net/anime-list-index（和上面那个对应，传火了，这个是新的长条式季度情报，望周知）<br>
+动漫新番表 byHazx. 2022年7月新番表|2022年4月新番表|Hazx新番表|追番表|H萌，https://hmacg.cn/bangumi/（国人自己做的，值得鼓励）<br>
+YuC's AnimeList，https://yuc.wiki/（爷青回，向B站远古up主长门有C致敬）<br>
+番组放送，https://bgmlist.com/（用来跳转的，看到那些港澳台之类的可以直接跳转）</p>
+<p>B站港澳台的玩法：<br>
+1、win10的UWP客户端，甚至可以下载，直连即可。<br>
+2、解除B站区域限制脚本（先安装油猴），安装地址：<br>
+https://greasyfork.org/zh-CN/scripts/25718-解除b站区域限制<br>
+注意安装完上面这个回去番组计划跳转到港澳台进入某一集番剧，依旧不行的，因为还要装一个HTML5视频播放器增强脚本，很多人没有装以为不行。下面是地址：<br>
+https://greasyfork.org/zh-CN/scripts/381682-html5视频播放器增强脚本<br>
+正式进入后要求授权，这里要参考以下github地址随便选一个在线的比较稳定的服务器即可<br>
+https://github.com/yujincheng08/BiliRoaming//wiki/公共解析服务器</p>
+<p>直接下载方式：<br>
+熔岩番剧库 - 主页 | LavaAnime，http://gh-anime.magmablock.top/index.html<br>
+（下载可能不够快但是比较稳，也支持在线看或者VLC源）<br>
+tg频道直接下载，订阅https://t.me/lilithraws和https://t.me/NC_Raws_Channel</p>
+<p>主流在线观看动画网站：<br>
+森之屋动漫-高质量在线动漫网站-S站，https://www.senfun.net/（已经寄，新站是稀饭）<br>
+稀饭动漫 - 免费高清动漫分享，https://www.xfani.com/（就是森之屋本体）<br>
+双辞动漫，https://www.scfun.net/（快，稳定）<br>
+OmoFun动漫视频网 - (￣﹃￣)~omO，https://omofun.tv/（快，稳定）<br>
+ZzzFun动漫视频网 - (￣﹃￣)~zZZ，http://www.zzzfun.com/（差不多快）<br>
+巴哈姆特動畫瘋，https://ani.gamer.com.tw/（好用）<br>
+アニメ新番組，https://bangumi.online/（好用）</p>
+<p>备用：<br>
+路漫漫，https://www.17skr.com/vod/show/id/1/year/2022.html<br>
+樱花动漫，http://www.dmh8.com/<br>
+风车动漫，https://www.dm530p.link/<br>
+哈哩哈哩，http://halihali5.com/<br>
+呀哩，https://www.yaliyali.cc/<br>
+Myself动漫，https://myself-bbs.com/portal.php<br>
+M站，https://www.bimiacg4.net/<br>
+AGE，https://www.agemys.com/<br>
+怡萱动漫，https://www.yxdmlove.com/<br>
+E-ACG，http://www.eacg.net/<br>
+5弹幕，https://www.5dm.app/<br>
+ACG寻漫屋，http://pixivpro.com/<br>
+異世界動漫，https://www.sbdm.net/<br>
+Anime1.me，https://anime1.me/</p>
+<p>官方辣鸡垫底：<br>
+Acfun，https://www.acfun.cn/<br>
+哔哩哔哩，https://www.bilibili.com/，工具箱，https://tool.rsplwe.com/</p>
+<p>扩展&amp;脚本&amp;下载：<br>
+1、kiwibrowser https://github.com/kiwibrowser/src.next/releases<br>
+Chrome内核，几乎一模一样，但是作为手机浏览器可以装拓展，可以装油猴、Feedbro<br>
+其他的浏览器，可以装插件的，有两个备用，狐猴浏览器，via浏览器。<br>
+2、秒传链接提取，https://greasyfork.org/zh-CN/scripts/424574-秒传链接提取<br>
+老司机懂的都懂，绕过审核的途径之一，南+老哥必备。<br>
+3、https://greasyfork.org/zh-CN/scripts/418182-百度网盘简易下载助手-直链下载复活版<br>
+某软件小妹的出品，能用的，外接Aria2之类的也行，之前给过下载器链接了（在上面）<br>
+4、Picviewer CE+，https://greasyfork.org/zh-CN/scripts/24204-picviewer-ce<br>
+一般遇到不方便保存的图片（我说的是本子）网站如果提供不了打包服务，就只能自己来了，这个插件是可以强行打包的，有过滤规则和打包选择。<br>
+5、Hoxx VPN Proxy – 下载 🦊 Firefox 扩展（zh-CN）<br>
+https://addons.mozilla.org/zh-CN/firefox/addon/hoxx-vpn-proxy/<br>
+Hoxx VPN是挺不错的浏览器vpn插件，也方便换节点，注意是浏览器内全局科学上网，浏览器外是没有科学上网的，你也可以边开火狐、边开Edge，国内国外两不误。<br>
+6、Image Search Options – 下载 🦊 Firefox 扩展（zh-CN）<br>
+https://addons.mozilla.org/zh-CN ... age-search-options/<br>
+不多赘述，一键跳转利器，还是那点，注意SauceNAO次数限制，换节点换节点换节点！</p>
+<p>galgame网站：<br>
+绯月，https://bbs.kfmax.com/<br>
+绯月备用，https://bbs.9shenmi.com/login.php<br>
+失落的galgame资源站，https://shinnku.com/<br>
+GalWorld，https://acgngame.net/<br>
+忧郁的loli_忧郁的弟弟，https://www.okloli.com/<br>
+终点论坛，https://bbs.zdfx.net/forum.php<br>
+花火，https://www.sayhuahuo.com/<br>
+GGBases，https://www.ggbases.com/<br>
+2DFan，https://galge.fun/<br>
+正太的仓库，https://xn--i8sv9y.ml/0:/<br>
+CnGal 中文GalGame资料站，https://www.cngal.org/<br>
+Silence Moon，http://cloud.noobhy.cc/<br>
+Onedrive01 - 18岁中学生的杂物间，https://makura.glitch.me/Onedrive01/<br>
+Office365 E5 Dev - Puppet Studio，https://木偶.ml/E5/<br>
+05的资源小站，https://alist05.herokuapp.com/<br>
+异度姬，https://www.yiduji.com/<br>
+月幕Galgame，https://www.ymgal.games/</p>
+
+            </div>
+            <hr style="width: 80%;">
+            
+            <div class="donateContainer">
+                <span class="donatebtn">赏</span>
+            </div>
+            <div class="donateContainer">
+                <img src="https://s2.loli.net/2023/02/06/8FAWKmqL3scOwoD.jpg" alt="" class="donate">
+            </div>
+            
+            <div class="postfooter">
+                <ul class="post-copyright">
+                    <li><strong>文章作者：</strong>剑客</li>
+            <li><strong>原文链接：</strong>https://anysword.com/post/zi-yuan/</li>
+            <li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用<i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA
+                许可协议。转载请注明出处！</li>
+            </ul>
+        </div>
+        
+            <div class="shareContainer">
+                <div class="share" style="height:30px;">
+                    <a class="qq" href=""><i><img class="shareicon"
+                                src="https://anysword.com//media/images/qqs.png" alt=""></i></a>
+                    <a class="wechat" href=""><i><img class="shareicon"
+                                src="https://anysword.com//media/images/wechats.png" alt=""></i></a>
+                    <a class="weibo" href=""><i><img class="shareicon"
+                                src="https://anysword.com//media/images/weibos.png" alt=""></i></a>
+                    <a class="qzone" href=""><i><img class="shareicon"
+                                src="https://anysword.com//media/images/qzones.png" alt=""></i></a>
+                    <a class="douban" href=""><i><img class="shareicon"
+                                src="https://anysword.com//media/images/doubans.png" alt=""></i></a>
+                    <a class="facebook" href=""><i><img class="shareicon"
+                                src="https://anysword.com//media/images/facebooks.png" alt=""></i></a>
+                    <a class="twitter" href=""><i><img class="shareicon"
+                                src="https://anysword.com//media/images/twitter.png" alt=""></i></a>
+                </div>
+            </div>
+            
+        <div id="otherpost">
+            
+            <a  data-pjax class="prev-post-pc" href="https://anysword.com/post/gong-ju/"  style="color: black;">
+                <div id="ppcontainer">
+                    
+                    <img src="https://s2.loli.net/2023/02/05/fykuM4LjnCZOxYV.jpg" style="width: 100%;" class="opimg">
+                    
+                    <h4 class="optitle">工具</h4>
+                </div>
+            </a>
+            <div class="prev-post">
+                上一篇 <a  data-pjax href="https://anysword.com/post/gong-ju/">工具</a>
+            </div>
+            
+            
+            <a data-pjax class="next-post-pc" href="https://anysword.com/post/xue-xi/"  style="color: black;">
+                <div id="npcontainer">
+                    
+                    <img src="https://s2.loli.net/2023/02/05/o3jgqUptyOr1nvI.jpg" style="width: 100%;" class="opimg">
+                    
+                    <h4 class="optitle">学习</h4>
+                </div>
+            </a>
+            <div class="next-post">
+                下一篇 <a  data-pjax href="https://anysword.com/post/xue-xi/">学习</a>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- 弹窗 -->
+    <div id="myModal" class="modal">
+        <img class="modal-content" id="img01">
+    </div>
+</body>
+<script>
+    //文章阅读热度
+    var pl = $("#pl").html();
+    var rootaddr = $("#rootaddr").html();
+    pl = pl.replace(rootaddr, "");
+    $("#hotnum").attr('id', pl);
+</script>
+                    <div class="toc-container">
+                        
+                    </div>
+                    <div class="tog">
+                        <div class="toggleContainer">
+                            <div class="toggle">
+                                <i class="fas fa-angle-double-up"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!---------------------------- 评论系统👇 ------------------------->
+                    <div id="comment" class="comment">
+                        <div class="commentcontainer">
+                            
+                                
+                                    
+                                        <link rel="stylesheet" href="https://anysword.com//media/css/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '0ba1b4607399070810c2',
+    clientSecret: '8f94bcabe6f30c2f60c2f46454f3572536260777',
+    repo: 'ysy9703.github.io',
+    owner: 'ysy9703',
+    admin: ['ysy9703'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+                                    
+                                    
+                                
+                            
+                        </div>
+                    </div>
+                    <!---------------------------- 评论系统👆 ------------------------->
+                </div>
+                <!-- main标签，pjax渲染时加载以上内容👆 -->
+                <div class="col-md-1 col-lg-2"></div>
+                <div id="bg">
+                </div>
+            </div>
+            <!-- ----------------左侧菜单栏html 👆-------------------------------------->
+            
+        </div>
+        <!-- aplayer播放器加载👇 -->
+            
+            <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+</head>
+
+<body>
+    <div class="miniMode">
+        <meting-js id="2829777524" server="netease" type="playlist" fixed="true" order="random" muted="muted">
+        </meting-js>
+    </div>
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+<script>
+    function aplayerInit() {
+        var aplayerid = "";
+        var aplayerserver = "tencent";
+        var aplayerorder = "random";
+        var aplayerautoplay = "true";
+        var aplayer = $("#myaplayer");
+        aplayer.attr("server", aplayerserver);
+        aplayer.attr("id", aplayerid);
+        aplayer.attr("order", aplayerorder);
+        if (aplayerautoplay == "true")
+            aplayer.attr("autoplay", "true");
+    }
+    aplayerInit();
+</script>
+
+<script src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/Aplayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+<script>
+    function aplayerbtnInit() {
+        var player = document.querySelectorAll('meting-js')[0].aplayer;
+        if(player==undefined)return false;
+        player.lrc.hide();
+        var mbabtn = $("#mbaplayer");
+        if (player.paused == false) {
+            mbabtn.removeClass("fa-play-circle-o");
+            mbabtn.addClass("fa-pause-circle");
+        } else {
+            mbabtn.addClass("fa-play-circle-o");
+            mbabtn.removeClass("fa-pause-circle");
+        }
+    }
+
+    function aplayerPlay() {
+        var player = document.querySelectorAll('meting-js')[0].aplayer;
+        var mbabtn = $("#mbaplayer");
+        if (player.paused == true) {
+            player.play();
+            mbabtn.removeClass("fa-play-circle-o");
+            mbabtn.addClass("fa-pause-circle");
+        } else {
+            player.pause();
+            mbabtn.addClass("fa-play-circle-o");
+            mbabtn.removeClass("fa-pause-circle");
+        }
+    }
+</script>
+            
+        <!-- aplayer播放器加载👆 -->
+    </div>
+    <!-- 背景图加载方式👇 -->
+    <div id="bgchoice" style="display: none">link
+                </div>
+                
+                <div id="bgurl" style="display:none">https://s2.loli.net/2023/02/05/dqnPzSXH46hAJVD.jpg</div>
+                
+    <!-- 背景图加载方式👆 -->
+</body>
+
+<script>
+    //初始化
+    //更换twikoo头像
+    setTimeout(replaceAvatar,1000);
+    setTimeout(replaceAvatar,2000);
+    setTimeout(replaceAvatar,8000);
+    // --------为每张图片添加懒加载（lazyload）标签-->懒加载功能 👇------------
+    lazyload();
+    //为文章内所有代码块添加代码复制功能 👇
+    codeinit();
+    // ------代码高亮显示功能-------------
+    hljs.initHighlightingOnLoad();
+    if (shareChoice)
+        shareInit();
+    if (donateChoice)
+        donateInit();
+</script>
+
+<!------------------ 加载live2d模型功能（看板娘）👇 ---------------->
+
+<script type="text/javascript">
+    var message_Path = '/live2d/'
+    var home_Path = document.getElementById("domainname").innerHTML + "/"; //此处修改为你的域名，必须带斜杠
+</script>
+<script type="text/javascript" src="https://anysword.com//media/js/live2d.js"></script>
+<script type="text/javascript" src="https://anysword.com//media/live2d/js/message.js"></script>
+<script type="text/javascript">
+    loadlive2d("live2d", "https://anysword.com//media/live2d/assets/tororo.model.json");
+</script>
+
+<!------------------ 加载live2d模型功能（看板娘）👆 ---------------->
+
+
+<!----------------------- 返回顶部按钮功能👇 --------------------->
+<script>
+    $(function () {
+        $('.toggleContainer').click(function () {
+            $('html,body').animate({
+                scrollTop: '0px'
+            }, 800);
+        });
+        $(window).scroll(function () {
+            var st = $(window).scrollTop();
+            if (st > 30) {
+                $(".toggleContainer").fadeIn(400);
+            } else {
+                $(".toggleContainer").fadeOut(100);
+            }
+        });
+    });
+</script>
+<!----------------------- 返回顶部按钮功能👆 --------------------->
+
+
+<!------------ 加载全局背景图功能👇（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
+<script>
+    var bgchoice = "link"
+    var bg = $('#bg');
+    var bgurl = document.getElementById("bgurl").innerHTML;
+    if (bgchoice == 'default')
+    {
+        for (var i = 0; i < 3; i++)
+            bgurl = bgurl.replace("\\", "/");
+        bgurl = "https://anysword.com//" + bgurl;
+    }
+    bg.css("background", "url('" + bgurl + "')");
+
+    window.onload = function () {
+        aplayerbtnInit();
+    }
+</script>
+<!------------ 加载全局背景图功能👆（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
+
+
+
+
+<script src="https://anysword.com//media/js/index.js"></script>
+
+
+<script>
+    //加载后的事件同步（阅读量、移动端评论等
+    window.onload = function () {
+    //代码块高亮渲染
+    document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+    });
+        getHotnum();
+        var sharepc = $(".share").eq(0).html();
+        $(".share").eq(1).html(sharepc);   //插件只会寻找一个分享标签渲染，所以需要手动添加到移动端
+        aplayerbtnInit();
+        $(".hljs").css({
+            "padding": "20px"
+        })
+    }
+</script>
+
+<!-- <script src="https://anysword.com//media/js/av-min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3.13.0/dist/av-min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.6.1/dist/av-live-query-min.js"></script> -->

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ysy9703.github.io</id>
+    <title>剑客</title>
+    <updated>2024-05-20T12:02:06.023Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://ysy9703.github.io"/>
+    <link rel="self" href="https://ysy9703.github.io/atom.xml"/>
+    <subtitle>我有一宝剑，出自昆吾溪。照人如照水，切玉如切泥。</subtitle>
+    <logo>https://ysy9703.github.io/images/avatar.png</logo>
+    <icon>https://ysy9703.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2024, 剑客</rights>
+    <entry>
+        <title type="html"><![CDATA[漫画]]></title>
+        <id>https://ysy9703.github.io/post/man-hua/</id>
+        <link href="https://ysy9703.github.io/post/man-hua/">
+        </link>
+        <updated>2023-02-11T03:59:19.000Z</updated>
+        <content type="html"><![CDATA[<p>整理漫画。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[动画]]></title>
+        <id>https://ysy9703.github.io/post/dong-hua/</id>
+        <link href="https://ysy9703.github.io/post/dong-hua/">
+        </link>
+        <updated>2023-02-11T03:58:26.000Z</updated>
+        <content type="html"><![CDATA[<p>整理一下各个动画社团的作品。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[社交]]></title>
+        <id>https://ysy9703.github.io/post/she-jiao/</id>
+        <link href="https://ysy9703.github.io/post/she-jiao/">
+        </link>
+        <updated>2023-02-08T08:55:20.000Z</updated>
+        <content type="html"><![CDATA[<p>和大家分享一下我都用哪些社交平台，他们之间的区别是什么，我又是怎么使用他们的。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[科研]]></title>
+        <id>https://ysy9703.github.io/post/kao-yan/</id>
+        <link href="https://ysy9703.github.io/post/kao-yan/">
+        </link>
+        <updated>2023-02-08T08:54:08.000Z</updated>
+        <content type="html"><![CDATA[<p>科研的内容等毕业了之后再整理。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[下载]]></title>
+        <id>https://ysy9703.github.io/post/xia-zai/</id>
+        <link href="https://ysy9703.github.io/post/xia-zai/">
+        </link>
+        <updated>2023-02-08T08:53:08.000Z</updated>
+        <content type="html"><![CDATA[<p>说到资源，首先得有一套好的下载方案，要不然找到资源也没用。</p>
+<p>各大网盘：<br>
+百度网盘主页 https://pan.baidu.com/disk/main?from=homeFlow#/index?category=all<br>
+阿里云盘 https://www.aliyundrive.com/drive</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[游戏]]></title>
+        <id>https://ysy9703.github.io/post/you-xi/</id>
+        <link href="https://ysy9703.github.io/post/you-xi/">
+        </link>
+        <updated>2023-02-08T08:51:06.000Z</updated>
+        <content type="html"><![CDATA[<p>MuseDash立绘还原方法：IOS和Android都是找到review这个文件，重命名就行。</p>
+<p>Apex 启动选项：+fps_max unlimited +exec 0.cfg</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[博客]]></title>
+        <id>https://ysy9703.github.io/post/da-jian-bo-ke/</id>
+        <link href="https://ysy9703.github.io/post/da-jian-bo-ke/">
+        </link>
+        <updated>2023-02-03T16:35:19.000Z</updated>
+        <content type="html"><![CDATA[<p>梳理一下我搭建博客的全过程。</p>
+<h1 id="1-markdown本站博客都是使用markdown完成">1. MarkDown：本站博客都是使用MarkDown完成</h1>
+<p>下面的视频简单介绍了语法。</p>
+<iframe 
+src="//player.bilibili.com/player.html?aid=327623069&bvid=BV1JA411h7Gw&cid=171385214&page=1" 
+scrolling="no" 
+border="0" 
+frameborder="no" 
+framespacing="0" 
+allowfullscreen="true" 
+height=600 
+width=800> 
+</iframe>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[翻墙]]></title>
+        <id>https://ysy9703.github.io/post/an-wang/</id>
+        <link href="https://ysy9703.github.io/post/an-wang/">
+        </link>
+        <updated>2023-02-03T16:22:45.000Z</updated>
+        <content type="html"><![CDATA[<p>介绍一下翻墙的方法，推荐机场。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[扩展]]></title>
+        <id>https://ysy9703.github.io/post/kuo-zhan-cheng-xu/</id>
+        <link href="https://ysy9703.github.io/post/kuo-zhan-cheng-xu/">
+        </link>
+        <updated>2023-02-03T16:21:30.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="1-主要介绍谷歌浏览器的扩展程序其他浏览器应该也有类似的不多赘述">1. 主要介绍谷歌浏览器的扩展程序，其他浏览器应该也有类似的，不多赘述。</h1>
+<h2 id="1-adblock-plus">（1） <a href="https://chromewebstore.google.com/detail/adblock-plus-%E5%85%8D%E8%B4%B9%E7%9A%84%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E5%99%A8/cfhdojbkjhnklbpkdaibdccddilifddb" title="去广告，真的好使">Adblock Plus</a></h2>
+<h2 id="2-bookmarkei">（2） <a href="https://chromewebstore.google.com/detail/bookmarkie-%E5%9C%A8%E5%BC%B9%E7%AA%97%E4%B8%AD%E6%9F%A5%E7%9C%8B%E3%80%81%E7%AE%A1%E7%90%86%E4%BD%A0%E7%9A%84%E4%B9%A6%E7%AD%BE/ahlphbdcaacfhkiajebghpngknafklbj" title="书签工具，主要是支持“在新标签页中打开书签”">bookmarkei</a></h2>
+<h2 id="3-沉浸式翻译">（3） <a href="https://chromewebstore.google.com/detail/%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91-%E7%BD%91%E9%A1%B5%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6-pdf%E7%BF%BB%E8%AF%91-%E5%85%8D%E8%B4%B9/bpoadfkcbjbfhfodiogcnhhhpibjhbnh" title="翻译网页用的，还可以翻译youtube字幕">沉浸式翻译</a></h2>
+<h2 id="4-验证码自动识别器">（4） <a href="https://chromewebstore.google.com/detail/%E9%AA%8C%E8%AF%81%E7%A0%81%E8%87%AA%E5%8A%A8%E8%AF%86%E5%88%AB%E5%99%A8-%E8%87%AA%E5%8A%A8%E8%AF%86%E5%88%AB%E5%A4%84%E7%90%86hcaptcha%E5%92%8Cr/hlifkpholllijblknnmbfagnkjneagid" title="就是用来对付经常弹出来让你选红绿灯的那玩意">验证码自动识别器</a></h2>
+<h2 id="5-篡改猴">（5） <a href="https://chromewebstore.google.com/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/dhdgffkkebhmkfjojejmpbldmpobfkfo" title="其实就是油猴，可以安装各种好用的脚本">篡改猴</a></h2>
+<h1 id="2-这里推荐一下自己用的油猴脚本">2. 这里推荐一下自己用的油猴脚本：</h1>
+<h2 id="1-ehsyringe">（1） <a href="https://sleazyfork.org/zh-CN/scripts/407833-ehsyringe" title="E-hentai界面翻译">EhSyringe</a></h2>
+<h2 id="2-redirect-外链跳转">（2） <a href="https://greasyfork.org/zh-CN/scripts/416338-redirect-%E5%A4%96%E9%93%BE%E8%B7%B3%E8%BD%AC" title="点击超链接直接访问网页">redirect 外链跳转</a></h2>
+<h2 id="3-youtube-click-to-play">（3） <a href="https://greasyfork.org/zh-CN/scripts/406420-youtube-click-to-play" title="禁用YouTube自动播放">YouTube Click To Play</a></h2>
+<h2 id="4-youtube-cpu-tamer">（4） <a href="https://greasyfork.org/zh-CN/scripts/418283-youtube-cpu-tamer" title="减少YouTubeCPU利用率">YouTube CPU Tamer</a></h2>
+<h2 id="5-youtube新标签页打开">（5） <a href="https://greasyfork.org/zh-CN/scripts/425740-youtube%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5%E6%89%93%E5%BC%80" title="YouTube支持点击打开新标签">youtube新标签页打开</a></h2>
+<h2 id="6-屏蔽广告屏蔽谷歌广告-百度广告-知乎广告-隐藏谷歌和百度搜索增强百度搜索结果的各种广告等等过滤所有采用谷歌联盟和百度联盟等广告联盟的广告">（6） <a href="https://greasyfork.org/zh-CN/scripts/439420-%E5%B1%8F%E8%94%BD%E5%B9%BF%E5%91%8A-%E5%B1%8F%E8%94%BD%E8%B0%B7%E6%AD%8C%E5%B9%BF%E5%91%8A-%E7%99%BE%E5%BA%A6%E5%B9%BF%E5%91%8A-%E7%9F%A5%E4%B9%8E%E5%B9%BF%E5%91%8A-%E9%9A%90%E8%97%8F%E8%B0%B7%E6%AD%8C%E5%92%8C%E7%99%BE%E5%BA%A6%E6%90%9C%E7%B4%A2%E5%A2%9E%E5%BC%BA%E7%99%BE%E5%BA%A6%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C%E7%9A%84%E5%90%84%E7%A7%8D%E5%B9%BF%E5%91%8A%E7%AD%89%E7%AD%89-%E8%BF%87%E6%BB%A4%E6%89%80%E6%9C%89%E9%87%87%E7%94%A8%E8%B0%B7%E6%AD%8C%E8%81%94%E7%9B%9F%E5%92%8C%E7%99%BE%E5%BA%A6%E8%81%94%E7%9B%9F%E7%AD%89%E5%B9%BF%E5%91%8A%E8%81%94%E7%9B%9F%E7%9A%84%E5%B9%BF%E5%91%8A" title="屏蔽各种广告">【屏蔽广告】屏蔽谷歌广告、百度广告、知乎广告、隐藏谷歌和百度搜索增强百度搜索结果的各种广告等等（过滤所有采用谷歌联盟和百度联盟等广告联盟的广告）</a></h2>
+<h2 id="7-吾爱破解论坛页面精简美化">（7） <a href="https://greasyfork.org/zh-CN/scripts/393516-%E5%90%BE%E7%88%B1%E7%A0%B4%E8%A7%A3%E8%AE%BA%E5%9D%9B%E9%A1%B5%E9%9D%A2%E7%B2%BE%E7%AE%80%E7%BE%8E%E5%8C%96" title="去掉乱七八糟的东西">吾爱破解论坛页面精简美化</a></h2>
+<h2 id="8-斗鱼虎牙b站直播极简">（8） <a href="https://greasyfork.org/zh-CN/scripts/431289-%E6%96%97%E9%B1%BC%E8%99%8E%E7%89%99b%E7%AB%99%E7%9B%B4%E6%92%AD%E6%9E%81%E7%AE%80" title="我只想安安静静看直播">斗鱼虎牙B站直播极简</a></h2>
+<h2 id="9-秒传链接提取">（9） <a href="https://greasyfork.org/zh-CN/scripts/469153-%E7%A7%92%E4%BC%A0%E9%93%BE%E6%8E%A5%E6%8F%90%E5%8F%96" title="不知道是什么就别安装">秒传链接提取</a></h2>
+<h2 id="10-网页限制解除改">（10） <a href="https://greasyfork.org/zh-CN/scripts/28497-%E7%BD%91%E9%A1%B5%E9%99%90%E5%88%B6%E8%A7%A3%E9%99%A4-%E6%94%B9" title="谁也阻止不了我的复制">网页限制解除(改)</a></h2>
+<h2 id="11-持续更新-csdn广告完全过滤-人性化脚本优化-不用再登录了让你体验令人惊喜的崭新csdn">（11） <a href="https://greasyfork.org/zh-CN/scripts/378351-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-csdn%E5%B9%BF%E5%91%8A%E5%AE%8C%E5%85%A8%E8%BF%87%E6%BB%A4-%E4%BA%BA%E6%80%A7%E5%8C%96%E8%84%9A%E6%9C%AC%E4%BC%98%E5%8C%96-%E4%B8%8D%E7%94%A8%E5%86%8D%E7%99%BB%E5%BD%95%E4%BA%86-%E8%AE%A9%E4%BD%A0%E4%BD%93%E9%AA%8C%E4%BB%A4%E4%BA%BA%E6%83%8A%E5%96%9C%E7%9A%84%E5%B4%AD%E6%96%B0csdn" title="CSDN是真的恶心">🔥持续更新🔥 CSDN广告完全过滤、人性化脚本优化：🆕 不用再登录了！让你体验令人惊喜的崭新CSDN</a></h2>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[工具]]></title>
+        <id>https://ysy9703.github.io/post/gong-ju/</id>
+        <link href="https://ysy9703.github.io/post/gong-ju/">
+        </link>
+        <updated>2023-02-03T11:51:42.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="1-翻墙就凭搜索引擎可以用谷歌值了">1. 翻墙：就凭搜索引擎可以用谷歌，值了</h1>
+<h1 id="2-浏览器谷歌浏览器-油猴">2. 浏览器：谷歌浏览器 + 油猴</h1>
+<h2 id="1microsoft-edge">（1）<a href="https://www.microsoft.com/zh-cn/edge" title="系统自带">Microsoft Edge</a></h2>
+<p>谷歌浏览器的套壳，有阅读功能、朗读功能、老IE模式，通过微软帐号同步。</p>
+<ul>
+<li>优点：功能较多，没有被墙</li>
+<li>缺点：同步烂，曾经加过天朝特供广告</li>
+</ul>
+<h2 id="2google-chrome">（2）<a href="https://www.google.com/intl/zh-CN/chrome/" title="最流行">Google Chrome</a></h2>
+<p>各种浏览器基本都是套它的壳，但自家更新肯定是最快的，通过谷歌帐号同步。</p>
+<ul>
+<li>优点：干净，更新快、稳定</li>
+<li>缺点：被墙</li>
+</ul>
+<h2 id="3mozilla-firefox">（3）<a href="http://www.firefox.com.cn/" title="没被墙">Mozilla Firefox</a></h2>
+<p>除了谷歌内核就是火狐内核了，一般都是作为备用，通过火狐帐号同步。</p>
+<ul>
+<li>优点：隐私保护好，没有被墙</li>
+<li>缺点：天朝特供版恶心人，装国际版都不行</li>
+</ul>
+<h2 id="4tor-browser">（4）<a href="https://www.torproject.org/zh-CN/download/" title="访问暗网">Tor Browser</a></h2>
+<p>火狐浏览器的套壳，一般用于特殊用途，没有帐号功能，不能同步。</p>
+<ul>
+<li>优点：隐私保护无敌，可以访问<strong>暗网</strong></li>
+<li>缺点：卡，被墙</li>
+</ul>
+<h2 id="总结谷歌有特殊需求就装tor">总结：谷歌，有特殊需求就装Tor</h2>
+<h2 id="下面的内容不一定适合所有人">下面的内容不一定适合所有人。</h2>
+<ul>
+<li><a href="/post/kuo-zhan-cheng-xu/" title="极大地提升浏览器的功能">谷歌浏览器扩展程序</a></li>
+</ul>
+<h1 id="3-pc常用软件台式机-笔记本">3. PC常用软件：台式机 + 笔记本</h1>
+<h1 id="4-ios常用软件手机">4. IOS常用软件：手机</h1>
+<h1 id="5-安卓常用软件平板">5. 安卓常用软件：平板</h1>
+]]></content>
+    </entry>
+</feed>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ysy9703.github.io</id>
+    <title>剑客</title>
+    <updated>2026-01-15T19:04:07.175Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://ysy9703.github.io"/>
+    <link rel="self" href="https://ysy9703.github.io/atom.xml"/>
+    <subtitle>我有一宝剑，出自昆吾溪。照人如照水，切玉如切泥。</subtitle>
+    <logo>https://ysy9703.github.io/images/avatar.png</logo>
+    <icon>https://ysy9703.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2026, 剑客</rights>
+    <entry>
+        <title type="html"><![CDATA[工具]]></title>
+        <id>https://ysy9703.github.io/post/gong-ju/</id>
+        <link href="https://ysy9703.github.io/post/gong-ju/">
+        </link>
+        <updated>2023-02-03T11:51:42.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="1-翻墙光就搜索引擎可以用谷歌这一点就已经值了">1. 翻墙：光就搜索引擎可以用谷歌这一点，就已经值了</h1>
+<p>这部分问问周围朋友吧，不会翻墙的话，你能体验到的互联网只相当于一个demo版本，翻墙之后才是正式版。</p>
+<h1 id="2-浏览器推荐谷歌浏览器-油猴脚本">2. 浏览器：推荐谷歌浏览器 + 油猴脚本</h1>
+<h2 id="1microsoft-edge">（1）<a href="https://www.microsoft.com/zh-cn/edge" title="系统自带">Microsoft Edge</a></h2>
+<p>谷歌浏览器的套壳，有阅读功能、朗读功能、老IE模式，通过微软帐号同步。</p>
+<ul>
+<li>优点：功能较多，没有被墙</li>
+<li>缺点：同步烂，曾经加过天朝特供广告</li>
+</ul>
+<h2 id="2google-chrome">（2）<a href="https://www.google.com/intl/zh-CN/chrome/" title="最流行">Google Chrome</a></h2>
+<p>各种浏览器基本都是套它的壳，但自家更新肯定是最快的，通过谷歌帐号同步。</p>
+<ul>
+<li>优点：干净，更新快、稳定</li>
+<li>缺点：被墙</li>
+</ul>
+<h2 id="3mozilla-firefox">（3）<a href="http://www.firefox.com.cn/" title="没被墙">Mozilla Firefox</a></h2>
+<p>除了谷歌内核就是火狐内核了，一般都是作为备用，通过火狐帐号同步。</p>
+<ul>
+<li>优点：隐私保护好，没有被墙</li>
+<li>缺点：天朝特供版恶心人，装国际版都不行</li>
+</ul>
+<h2 id="4tor-browser">（4）<a href="https://www.torproject.org/zh-CN/download/" title="访问暗网">Tor Browser</a></h2>
+<p>火狐浏览器的套壳，一般用于特殊用途，没有帐号功能，不能同步。</p>
+<ul>
+<li>优点：隐私保护无敌，可以访问<strong>暗网</strong></li>
+<li>缺点：卡，被墙</li>
+</ul>
+<h2 id="扩展">扩展：</h2>
+<ul>
+<li><a href="/post/kuo-zhan-cheng-xu/" title="极大地提升浏览器的功能">谷歌浏览器扩展程序+油猴脚本</a></li>
+</ul>
+<h1 id="3-pc常用软件windows系统">3. PC常用软件：Windows系统</h1>
+<h1 id="4-ios常用软件个人目前的主力">4. IOS常用软件：个人目前的主力</h1>
+<h1 id="5-安卓常用软件处理ios不方便做的事情">5. 安卓常用软件：处理IOS不方便做的事情</h1>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[资源]]></title>
+        <id>https://ysy9703.github.io/post/zi-yuan/</id>
+        <link href="https://ysy9703.github.io/post/zi-yuan/">
+        </link>
+        <updated>2023-02-03T11:50:55.000Z</updated>
+        <content type="html"><![CDATA[<p>galgame网站：<br>
+绯月，https://bbs.kfmax.com/<br>
+绯月备用，https://bbs.9shenmi.com/login.php<br>
+失落的galgame资源站，https://shinnku.com/<br>
+GalWorld，https://acgngame.net/<br>
+忧郁的loli_忧郁的弟弟，https://www.okloli.com/<br>
+终点论坛，https://bbs.zdfx.net/forum.php<br>
+花火，https://www.sayhuahuo.com/<br>
+GGBases，https://www.ggbases.com/<br>
+2DFan，https://galge.fun/<br>
+正太的仓库，https://xn--i8sv9y.ml/0:/<br>
+CnGal 中文GalGame资料站，https://www.cngal.org/<br>
+Silence Moon，http://cloud.noobhy.cc/<br>
+Onedrive01 - 18岁中学生的杂物间，https://makura.glitch.me/Onedrive01/<br>
+Office365 E5 Dev - Puppet Studio，https://木偶.ml/E5/<br>
+05的资源小站，https://alist05.herokuapp.com/<br>
+异度姬，https://www.yiduji.com/<br>
+月幕Galgame，https://www.ymgal.games/</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[学习]]></title>
+        <id>https://ysy9703.github.io/post/xue-xi/</id>
+        <link href="https://ysy9703.github.io/post/xue-xi/">
+        </link>
+        <updated>2023-02-03T11:50:07.000Z</updated>
+        <content type="html"><![CDATA[<p>学习</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[生活]]></title>
+        <id>https://ysy9703.github.io/post/sheng-huo/</id>
+        <link href="https://ysy9703.github.io/post/sheng-huo/">
+        </link>
+        <updated>2023-02-03T11:49:50.000Z</updated>
+        <content type="html"><![CDATA[<p>正文。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[娱乐]]></title>
+        <id>https://ysy9703.github.io/post/yu-le/</id>
+        <link href="https://ysy9703.github.io/post/yu-le/">
+        </link>
+        <updated>2023-02-03T11:46:13.000Z</updated>
+        <content type="html"><![CDATA[<p>娱乐</p>
+]]></content>
+    </entry>
+</feed>
